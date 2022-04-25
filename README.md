@@ -1,4 +1,4 @@
-# DevPps Tutorial
+# DevOps Tutorial
 
 Practical DevOps Book
 
