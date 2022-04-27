@@ -6,24 +6,7 @@ services:
     build: python/
     restart: always
 
-    networks:
-      - microservice
-      - default
-
-  smtp:
-    container_name: email_smtp
-    image: bytemark/smtp
-    restart: always
-    environment:
-      RELAY_HOST: smtp.gmail.com
-      RELAY_PORT: 587
-      RELAY_USERNAME: k.bijayayothin@gmail.com
-      RELAY_PASSWORD: xxxxxxxxxxx
-
 networks:
   default:
-    external:
-      name: email_network
-  microservice:
     external:
       name: microservice_network

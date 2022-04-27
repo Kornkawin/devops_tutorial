@@ -5,6 +5,8 @@ services:
     container_name: register_gateway
     build: python/
     restart: always
+    environment:
+      VIRTUAL_HOST: www.api.kornkawin.dev
     ports:
       - "7001:80"
 networks:
