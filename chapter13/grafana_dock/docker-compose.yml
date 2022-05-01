@@ -10,9 +10,9 @@ services:
       - prometheus
     environment:
       GF_INSTALL_PLUGINS: grafana-clock-panel, grafana-simple-json-datasource
-      VIRTUAL_HOST: www.grafana.kornkawin.dev
+      VIRTUAL_HOST: service.grafana.kornkawin.dev
       VIRTUAL_PORT: 3000
-      LETSENCRYPT_HOST: www.grafana.kornkawin.dev
+      LETSENCRYPT_HOST: service.grafana.kornkawin.dev
     networks: 
       - webproxy
       - default
