@@ -65,7 +65,7 @@ services:
       DB_HOST: konga_db
       DB_USER: konga 
       DB_DATABASE: konga
-      NODE_ENV: development
+      NODE_ENV: production
 
       VIRTUAL_HOST: service.konga.kornkawin.dev
       VIRTUAL_PORT: 1337
