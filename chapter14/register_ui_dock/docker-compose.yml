@@ -9,8 +9,8 @@ services:
       - "80"
       
     environment:
-      VIRTUAL_HOST: www.labxx.cpsudevops.com
-      LETSENCRYPT_HOST: www.labxx.cpsudevops.com
+      VIRTUAL_HOST: www.kornkawin.dev
+      LETSENCRYPT_HOST: www.kornkawin.dev
       
     networks:
       - webproxy

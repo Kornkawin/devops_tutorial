@@ -10,11 +10,10 @@ def send_email(otp, email):
     msg['Subject'] = 'Register OTP'
     msg['To'] = email
 
-    s = smtplib.SMTP("smtp_otp",25)
-    s.ehlo()
-    s.sendmail(from_addr = 'nuttachot@hotmail.com', to_addrs = email, msg = msg.as_string())
-    s.quit()
-
+    with smtplib.SMTP("smtp.mailtrap.io", 587) as server:
+        server.starttls()
+        server.login('60f8f73d19e290', '149dab90b40235')
+        server.sendmail(from_addr = 'k.bijayayothin@gmail.com', to_addrs = email, msg = msg.as_string())
 
 class Email:
     name = "email_otp"

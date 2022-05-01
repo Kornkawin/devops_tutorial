@@ -18,7 +18,7 @@ app = FastAPI()
 
 broker_cfg = {'AMQP_URI': "amqp://guest:guest@rabbitmq"}
 
-@app.post("/getotp/")
+@app.post("/getotp")
 def get_otp(email: Email):
     with ClusterRpcProxy(broker_cfg) as rpc:
         otp = rpc.otp.create(email.email)
@@ -27,14 +27,14 @@ def get_otp(email: Email):
 
     return {'results': str(otp)}
     
-@app.post("/create_email_list/")
+@app.post("/create_email_list")
 def create_email_list(email_list: EmailList):
     with ClusterRpcProxy(broker_cfg) as rpc:
         val = rpc.otp.create_email_list(email_list.emails)
   
     return {'results': val}
     
-@app.post("/authen/")
+@app.post("/authen")
 def authen(authen: Authen):
     with ClusterRpcProxy(broker_cfg) as rpc:
         success = rpc.otp.authen(authen.email, authen.otp)
