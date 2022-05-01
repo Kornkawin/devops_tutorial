@@ -11,16 +11,14 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;***Remark: Konga has some bugs when first running with NODE_ENV=production***  
 &nbsp;&nbsp;&nbsp;&nbsp;***Solution:***
-1. $cd kong_dock  
-2. $docker-compose up -d  
-3. Navigate to Konga by browser  
-4. Register admin user and add Kong Admin URL, then close browser.  
-5. $docker-compose down  
-6. $rm docker-compose.yml  
-7. $mv docker-compose-production.yml docker-compose.yml  
-8. $rm docker-compose-production.yml  
-9. $docker-compose up -d  
-10. Konga can be used
+1. $cd kong_dock
+2. $docker-compose up -d
+3. Navigate to Konga by browser. 
+4. Register admin user and add Kong Admin URL, then close browser.
+5. $docker-compose down
+6. $mv docker-compose-production.yml docker-compose.yml
+7. $docker-compose up -d
+8. Konga can be used with less resources.
 
 **Chapter 14:** OTP service and session server development with Redis and Flask  
 **Chapter 15:** Web application development with nearly zero downtime  
