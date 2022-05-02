@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  email_rpc:
+    container_name: email_rpc
+    build: python/
+    restart: always
+
+networks:
+  default:
+    external:
+      name: microservice_network

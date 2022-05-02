@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  grafana:
+    image: grafana/grafana
+    restart: always
+    expose:
+      - "3000"
+    external_links:
+      - prometheus
+    environment:
+      GF_INSTALL_PLUGINS: grafana-clock-panel, grafana-simple-json-datasource
+      VIRTUAL_HOST: service.grafana.kornkawin.dev
+      VIRTUAL_PORT: 3000
+      LETSENCRYPT_HOST: service.grafana.kornkawin.dev
+    networks: 
+      - webproxy
+      - default
+      
+networks:
+  webproxy:
+    external:
+      name: webproxy
+  default:
+    external:
+      name: kong_network
