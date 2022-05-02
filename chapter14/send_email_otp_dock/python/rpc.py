@@ -12,7 +12,7 @@ def send_email(otp, email):
 
     with smtplib.SMTP("smtp.mailtrap.io", 587) as server:
         server.starttls()
-        server.login('60f8f73d19e290', '149dab90b40235')
+        server.login('682b2ec3fa0387', '0640703674de45')
         server.sendmail(from_addr = 'k.bijayayothin@gmail.com', to_addrs = email, msg = msg.as_string())
 
 class Email:
