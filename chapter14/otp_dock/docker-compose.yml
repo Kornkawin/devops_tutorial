@@ -16,6 +16,7 @@ services:
   otp_redis:
     container_name: otp_redis
     image: "redis:alpine"
+    restart: always
     
 networks:
   default:
